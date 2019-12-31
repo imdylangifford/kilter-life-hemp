@@ -1,1 +1,346 @@
-<h2>this is the div</h2>
+<!doctype html>
+
+<head>
+    <title>Kilter Life Hemp Oil</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="{{ page_description | escape }}">
+    <link rel="canonical" href="{{ canonical_url }}">
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+
+</head>
+
+<body>
+    <div onclick="closeCart()" class="slideout-cart-cover"></div>
+    <div class="c-hp flex-c">
+        <div id="slideout" class="c-hp--slideout flex jc">
+            <div id="slideout-c" class="slideout-c flex-c ai">
+                <a href="/pages/shop">Shop</a>
+                <a href="/pages/quality">Quality</a>
+                <a href="/pages/learn">Learn</a>
+                <a href="/pages/help">Help</a>
+            </div>
+        </div>
+        <div class="c-header flex-c">
+            <div class="fs-bar flex jcai">
+                <p>FREE Shipping on all orders + use code HOLIDAYS for 20% off</p>
+            </div>
+            <div class="flex">
+                <p onclick="closeNav()" id="x">X</p>
+                <img onclick="openNav()" id="hamburger"
+                    src="https://ucarecdn.com/9c1349b6-a4f5-437d-9105-4d3dc081f18e/hamburgericon.png" alt="">
+                <a href="/">
+                    <h2 class="kilter">Kilter Life</h2>
+                </a>
+                <img onclick="openCart()"
+                    src="https://ucarecdn.com/9a2f6e32-2f2a-4030-aa5b-2cee198de212/shoppingcart.svg" alt="">
+            </div>
+        </div>
+
+        <div class="opacity-cover"></div>
+        <div class="c-hp--text flex-c jcai">
+            <h2>A CBD Blend for Everyone.</h2>
+            <p>Get started by choosing an area in which you need help</p>
+        </div>
+        <div class="c-hp--links flex jcai">
+            <div class="flex">
+                <a href="/pages/shop#Peace" class="c-hp--link-peace flex jcai">
+                    <p>Anxiety</p><img src="https://ucarecdn.com/e37242fa-90f2-49c3-abd2-9c1c359f8120/happiness.png"
+                        alt="">
+                </a>
+                <a href="/pages/shop#Focus" class="c-hp--link-focus flex jcai">
+                    <p>Focus</p><img src="https://ucarecdn.com/8a0b8510-5cc9-459e-be33-bc52ff482e52/idea.png" alt="">
+                </a>
+            </div>
+            <div class="flex">
+                <a href="/pages/shop#Sleep" class="c-hp--link-sleep flex jcai">
+                    <p>Sleep</p><img src="https://ucarecdn.com/a9058dc3-b994-4ed3-a96d-bd6c01c4007c/moon.png" alt="">
+                </a>
+                <a href="/pages/shop#Comfort" class="c-hp--link-comfort flex jcai">
+                    <p>Pain</p><img src="https://ucarecdn.com/5b16b137-13bf-4eeb-b73c-b0741cd770e5/heartbeat.png"
+                        alt="">
+                </a>
+            </div>
+        </div>
+        <a href="/pages/learn" class="c-hp--learn flex jcai">
+            <p>Learn More About CBD</p><img
+                src="https://ucarecdn.com/de66832c-9ca0-4b29-9376-fe7b20e82cc0/outputonlinepngtools.png" alt="">
+        </a>
+    </div>
+</body>
+
+</html><script>
+    function openNav() {
+      document.getElementById('hamburger').style.display = 'none';
+      document.getElementById('x').style.display = 'block';
+      document.getElementById('slideout').style.width = `${window.innerWidth}px`;
+      $('.c-header').removeClass('dark-header')
+      $('.c-header').addClass('open-header')
+      setTimeout(function(){
+        document.getElementById('slideout-c').style.display = 'flex';
+      }, 200);
+    }
+    
+    /* Set the width of the side navigation to 0 */
+    function closeNav() {
+      document.getElementById('hamburger').style.display = 'block';
+      document.getElementById('x').style.display = 'none';
+      document.getElementById('slideout').style.width = "0";
+      document.getElementById('slideout-c').style.display = 'none';
+      $('.c-header').removeClass('open-header');
+      if(window.location.href.includes('shop') || window.location.href.includes('help') ) {
+          $('.c-header').addClass('dark-header')
+      }
+    }
+    
+    
+    function openCart() {
+        $('.slideout-cart-cover').addClass("slide-opacity-cover");
+        $('.c-slideout-cart').addClass("openCart");
+        $('.close-cart').css('display', 'block')
+    }
+    function closeCart() {
+        $('.slideout-cart-cover').removeClass("slide-opacity-cover");
+        $('.c-slideout-cart').removeClass("openCart");
+        $('.close-cart').css('display', 'none')
+    }
+    </script>
+
+    <style>
+    .c-hp {
+  position: relative;
+  background-image: url("https://ucarecdn.com/0e75c22c-49e0-46e4-ab1b-d0db98dcdad7/doranerickson1DqUUUw0Xwunsplash.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  padding: 0px 50px;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+}
+.c-hp > div {
+  text-align: center;
+}
+.c-hp h2, .c-hp p {
+  color: white;
+}
+.c-hp--slideout {
+  height: 100%;
+  width: 0%;
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  background-color: #8a946c;
+  transition: 0.3s;
+}
+.c-hp--slideout a:first-of-type {
+  color: white;
+  border-radius: 5px;
+  border: 1px solid white;
+  padding: 20px 40px;
+  margin-bottom: 50px;
+  max-width: 300px;
+  width: 80%;
+  text-align: center;
+}
+.c-hp--slideout a:first-of-type:hover {
+  color: #1F292B;
+  background-color: white;
+  text-decoration: none;
+}
+.c-hp--slideout a {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 10px 0px;
+}
+.c-hp--slideout a:hover {
+  text-decoration: underline;
+}
+.c-hp--slideout p {
+  max-width: 300px;
+  width: 80%;
+  font-size: 10px;
+  margin-top: 25px;
+  opacity: 0.8;
+}
+.c-hp--slideout p:first-of-type {
+  padding-top: 20px;
+}
+.c-hp--slideout > div {
+  padding-top: 50px;
+  display: none;
+}
+.c-hp--text {
+  padding: 20px;
+}
+.c-hp--text span {
+  font-weight: bold;
+}
+.c-hp--text h2 {
+  font-size: 100px;
+  font-weight: bold;
+  padding: 20px;
+}
+.c-hp--text p:last-of-type {
+  font-size: 26px;
+  max-width: 840px;
+}
+.c-hp--text, .c-hp--links {
+  position: inherit;
+  z-index: 1;
+}
+.c-hp--links {
+  width: 100%;
+  margin-top: 20px;
+  max-width: 1200px;
+}
+.c-hp--links > div:first-of-type {
+  margin-right: 10px;
+}
+.c-hp--links > div:last-of-type {
+  margin-left: 10px;
+}
+.c-hp--links > div {
+  width: 100%;
+  justify-content: space-between;
+}
+.c-hp--links > div a {
+  cursor: pointer;
+  padding: 20px;
+  transition: 0.3s;
+  border-radius: 5px;
+  max-width: 240px;
+  min-width: 220px;
+}
+.c-hp--links > div a p {
+  font-size: 24px;
+  padding-right: 15px;
+}
+.c-hp--links > div a img {
+  max-width: 30px;
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(166deg) brightness(106%) contrast(105%);
+}
+.c-hp--link-sleep {
+  border: 2px solid #ddb0a7;
+}
+.c-hp--link-sleep:hover {
+  background-color: #ddb0a7 !important;
+}
+.c-hp--link-focus {
+  border: 2px solid #eaad59;
+}
+.c-hp--link-focus:hover {
+  background-color: #eaad59 !important;
+}
+.c-hp--link-comfort {
+  border: 2px solid #de8052;
+}
+.c-hp--link-comfort:hover {
+  background-color: #de8052 !important;
+}
+.c-hp--link-peace {
+  border: 2px solid #abbddd;
+}
+.c-hp--link-peace:hover {
+  background-color: #abbddd !important;
+}
+.c-hp--learn {
+  position: initial;
+  z-index: 1;
+  cursor: pointer;
+  margin: 30px 20px;
+  padding: 20px 0px;
+  transition: 0.3s;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 1200px;
+  border: 2px solid #8a946c;
+}
+.c-hp--learn:hover {
+  background-color: #8a946c;
+}
+.c-hp--learn p {
+  color: white;
+  font-size: 36px;
+  padding-right: 30px;
+}
+.c-hp--learn img {
+  max-width: 30px;
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(166deg) brightness(106%) contrast(105%);
+}
+.open-header p, .open-header h2 {
+  color: white !important;
+}
+.c-header {
+  position: absolute;
+  justify-content: space-between;
+  z-index: 200;
+  top: 20px;
+  width: 100%;
+  padding: 0px 25px;
+  left: 0;
+  box-sizing: border-box;
+}
+.c-header p {
+  color: white;
+}
+.c-header h2 {
+  color: white;
+}
+.c-header h2 {
+  font-size: 40px;
+}
+.c-header img {
+  cursor: pointer;
+  max-width: 30px;
+  align-self: center;
+}
+#x {
+  display: none;
+  cursor: pointer;
+  font-size: 28px;
+}
+@media only screen and (min-width: 1300px) {
+  .c-hp--links > div a {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .c-hp--links > div {
+    flex-direction: column;
+  }
+  .c-hp--links > div a {
+    max-width: 100%;
+    margin: 10px 0px;
+  }
+  .c-hp--learn {
+    margin: 10px 20px;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .c-hp {
+    padding: 0px 25px;
+  }
+  .c-hp--links > div a {
+    min-width: initial;
+  }
+  .c-hp--links > div a p {
+    font-size: 18px;
+  }
+  .c-hp--learn p {
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width: 805px) {
+  .c-hp--text h2 {
+    font-size: 36px;
+  }
+  .c-hp--text p:last-of-type {
+    font-size: 18px;
+  }
+}
+
+    </style>
