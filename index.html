@@ -7,7 +7,7 @@
     <meta name="description" content="{{ page_description | escape }}">
     <link rel="canonical" href="{{ canonical_url }}">
     <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
-
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -15,10 +15,10 @@
     <div class="c-hp flex-c">
         <div id="slideout" class="c-hp--slideout flex jc">
             <div id="slideout-c" class="slideout-c flex-c ai">
-                <a href="/pages/shop">Shop</a>
-                <a href="/pages/quality">Quality</a>
-                <a href="/pages/learn">Learn</a>
-                <a href="/pages/help">Help</a>
+                <a href="https://kilter.life/pages/shop">Shop</a>
+                <a href="https://kilter.life/pages/quality?=hemp">Quality</a>
+                <a href="https://kilter.life/pages/learn?=hemp">Learn</a>
+                <a href="https://kilter.life/pages/help?=hemp">Help</a>
             </div>
         </div>
         <div class="c-header flex-c">
@@ -32,8 +32,10 @@
                 <a href="/">
                     <h2 class="kilter">Kilter Life</h2>
                 </a>
-                <img onclick="openCart()"
-                    src="https://ucarecdn.com/9a2f6e32-2f2a-4030-aa5b-2cee198de212/shoppingcart.svg" alt="">
+                <div> <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script></div>
             </div>
         </div>
 
@@ -44,25 +46,25 @@
         </div>
         <div class="c-hp--links flex jcai">
             <div class="flex">
-                <a href="/pages/shop#Peace" class="c-hp--link-peace flex jcai">
+                <a href="https://kilter.life/pages/shop#Peace?=hemp" class="c-hp--link-peace flex jcai">
                     <p>Anxiety</p><img src="https://ucarecdn.com/e37242fa-90f2-49c3-abd2-9c1c359f8120/happiness.png"
                         alt="">
                 </a>
-                <a href="/pages/shop#Focus" class="c-hp--link-focus flex jcai">
+                <a href="https://kilter.life/pages/shop#Focus?=hemp" class="c-hp--link-focus flex jcai">
                     <p>Focus</p><img src="https://ucarecdn.com/8a0b8510-5cc9-459e-be33-bc52ff482e52/idea.png" alt="">
                 </a>
             </div>
             <div class="flex">
-                <a href="/pages/shop#Sleep" class="c-hp--link-sleep flex jcai">
+                <a href="https://kilter.life/pages/shop#Sleep?=hemp" class="c-hp--link-sleep flex jcai">
                     <p>Sleep</p><img src="https://ucarecdn.com/a9058dc3-b994-4ed3-a96d-bd6c01c4007c/moon.png" alt="">
                 </a>
-                <a href="/pages/shop#Comfort" class="c-hp--link-comfort flex jcai">
+                <a href="https://kilter.life/pages/shop#Comfort?=hemp" class="c-hp--link-comfort flex jcai">
                     <p>Pain</p><img src="https://ucarecdn.com/5b16b137-13bf-4eeb-b73c-b0741cd770e5/heartbeat.png"
                         alt="">
                 </a>
             </div>
         </div>
-        <a href="/pages/learn" class="c-hp--learn flex jcai">
+        <a href="https://kilter.life/pages/learn?=hemp" class="c-hp--learn flex jcai">
             <p>Learn More About Hemp Oil</p>
             <img src="https://ucarecdn.com/de66832c-9ca0-4b29-9376-fe7b20e82cc0/outputonlinepngtools.png" alt="">
         </a>
@@ -107,6 +109,12 @@
     </script>
 
   <style>
+@font-face {
+  font-family: "BK";
+  src: url(https://ucarecdn.com/7f43e48b-ba34-4336-8c00-6089425e7f66/BK.otf)
+}
+h1 { font-family: "BK", sans-serif }
+
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -191,7 +199,7 @@ button {
   margin-bottom: 5px;
 }
 .kilter {
-  font-family: 'Bebaskai';
+  font-family: 'BK';
   letter-spacing: 1.5px;
 }
 #shopify-product-reviews {
@@ -290,7 +298,7 @@ button {
   padding-top: 20px;
 }
 .c-hp--slideout > div {
-  padding-top: 50px;
+  padding-top: 120px;
   display: none;
 }
 .c-hp--text {
